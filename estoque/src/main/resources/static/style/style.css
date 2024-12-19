@@ -1,0 +1,202 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+}
+.menu {
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+/* modelo navegação */ 
+ .noselect {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: rgb(20, 184, 20);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: rgb(20, 184, 20);
+ }
+ 
+ .noselect, .noselect span {
+  transition: 200ms;
+ }
+ 
+ .noselect .text {
+  transform: translateX(25px);
+  color: white;
+  font-weight: bold;
+  margin-right: 20px;
+ }
+ 
+ .noselect .icone {
+  position: absolute;
+  border-left: 1px solid white;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ .noselect svg {
+  width: 15px;
+  fill: #eee;
+ }
+ 
+ .noselect:hover {
+  background: rgb(20, 184, 20);
+ }
+ 
+ .noselect:hover .text {
+  color: transparent;
+ }
+ 
+ .noselect:hover .icone {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+ }
+ 
+ .noselect:focus {
+  outline: none;
+ }
+ 
+ .noselect:active .icone svg {
+  transform: scale(0.8);
+ }
+/* estilo dos cards */
+.produtos {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta a quantidade de colunas */
+  gap: 20px; /* Espaço entre os cards */
+  padding: 20px;
+  align-items: center;
+  width: 100%;
+}
+.card {
+  font-family: monospace;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  flex-direction: column;
+  box-shadow: 0 4px 6px wheat;
+  background-color: #f9f9f9;
+  border: 3px solid #ddd;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.truncate {
+  white-space: nowrap; 
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+}
+
+
+
+
+/* estilo do botão */ 
+   .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+   .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+   .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+   .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+   .icon:hover span,
+   .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+   .Edit:hover,
+   .Edit:hover .tooltip,
+   .Edit:hover .tooltip::before {
+    background: green;
+    color: #fff;
+  }
+  .Delete:hover,
+   .Delete:hover .tooltip,
+   .Delete:hover .tooltip::before {
+    background: red;
+    color: #fff;
+  }
+  .Edit, 
+   .Edit .tooltip,
+   .Edit .tooltip::before {
+    color: black;
+  }
+  .Delete,
+   .Delete .tooltip,
+   .Delete .tooltip::before {
+    color: black;
+  }
+
+   
+  
+   
+  
+  
