@@ -48,10 +48,24 @@ Este sistema utiliza uma implementação de banco de dados para gerenciar o esto
 | **Qtd** |  INT    |  Quantidade do Produto          |
 
 ### Rodando Codigo:
-https://github.com/user-attachments/assets/96a306f3-7623-4924-b31e-1bba437ac466
+https://github.com/user-attachments/assets/39deea4c-2771-4b10-9275-513d23f603a9
+
+## Rotas do POSTMAN:
+**POST e GET (Todos os produtos):**
+- **Rota:** http://localhost:3306/almo-sys/produtos
+- **Descrição:**
+ - **POST:** Adiciona novos produtos ao estoque.
+- **GET:** Lista todos os produtos cadastrados no estoque.
+
+**PUT, DELETE e GET (Produto específico):**
+- **Rota:** http://localhost:3306/almo-sys/produtos/{id}
+- **Descrição:**
+- **PUT:** Atualiza as informações de um produto específico pelo ID.
+- **DELETE:** Remove um produto específico do estoque pelo ID.
+- **GET:** Retorna as informações de um produto específico pelo ID.
 
 ## Mudança de Conexão Importante ⚠️:
-![Conexão](https://github.com/user-attachments/assets/a363d006-5b52-4269-9357-1258e12620ea)
+![Alterações](https://github.com/user-attachments/assets/cdd667ed-d7fc-4278-93e3-231512763122)
 
 ### Caso você não deseje criar uma conexão com o banco de dados na porta padrão 3306 e queira que o servidor Spring Boot seja executado na porta 8081, com o nome do banco sendo estoque, e o usuário e senha como root, aqui estão alguns avisos: 
 
