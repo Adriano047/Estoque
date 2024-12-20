@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <a name="Top"></a>
+    <a href="#Topo" class="SetaDeRetorno"> <p style="font-size: 70px;">↑</p></i></a>
+   
     <nav class="menu">
         <button class="noselect" onclick="metodoPOST()"><span class="text">cadastrar</span><span class="icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512"><path fill="#ffffff" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"></path></svg></span></button>
     </nav>
     <div class="produtos">
         <div class="card" th:each="produto : ${produto}">
             <div class="content">
-               <h5 class = "truncate" th:text="'Nome: ' + ${produto.nome}"> </h5>
-               <h5 th:text="'Preço: $' + ${produto.preco}"></h5>
-                <h5 th:text="'Quantidade: ' + ${produto.qtd}"></h5>
-            <div>
-                <button class="btn">
+                <div class="content-nome">
+                    <h5 class = "truncate  product-name"   th:text="${produto.nome}"> </h5>
+                </div>
+                <h5  class = "product-preco" th:text="'R$ ' + ${produto.preco}"></h5>
+                <h5  class = "product-quantidade" th:text="${produto.qtd} + ' em estoque'"></h5>
+            <div style="display: flex; justify-content: center">
                     <a th:href="@{/AlterarProduto/{id}(id=${produto.id})}">
                         <li class="icon Edit">
                             <span class="tooltip">Editar</span>
@@ -32,8 +37,6 @@
                             </svg>
                           </li>
                     </a>
-                </button>
-                <button class="btn">
                     <a th:href="@{/DeletarProduto/{id}(id=${produto.id})}">
                         <li class="icon Delete">
                             <span class="tooltip">Excluir</span>
@@ -47,7 +50,6 @@
                             </svg>
                           </li>
                     </a>
-                </button>
             </div>
             </div>
         </div>
@@ -55,4 +57,5 @@
    
 </body>
 <script src="/js/script.js"></script>
+
 </html>

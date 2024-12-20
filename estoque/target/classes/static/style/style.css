@@ -2,6 +2,21 @@
   margin: 0px;
   padding: 0px;
 }
+.SetaDeRetorno {
+  position: fixed;
+  font-size: 10px;
+  height: 100px;
+  width: 100px;
+  color: black;
+  z-index: 100;
+  bottom: 20px;
+  right: 20px; 
+  transform: translateY(0); 
+  transition: transform 1s ease; 
+}
+.SetaDeRetorno:hover  {
+  transform: translateY(-50px)
+}
 a {
   text-decoration: none;
 }
@@ -82,39 +97,67 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta a quantidade de colunas */
   gap: 20px; /* Espaço entre os cards */
   padding: 20px;
-  align-items: center;
+  align-items: stretch; /* Garante que os cards ocupem toda a altura disponível */
   width: 100%;
 }
+
 .card {
   font-family: monospace;
   display: flex;
-  border-bottom: 1px solid #ddd;
-  overflow: hidden;
   flex-direction: column;
+  border-bottom: 1px solid #ddd;
   box-shadow: 0 4px 6px wheat;
   background-color: #f9f9f9;
   border: 3px solid #ddd;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: flex-start; 
+  min-height: 200px;
+  position: relative;
 }
+.content-nome {
+  width: 250px; 
+  height: 100px; 
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  border-bottom: 0.5px solid rgb(131, 118, 118);
+  margin-bottom: 1rem;
+  display: box;
+  line-clamp: 2;
+  box-orient: vertical;
+  text-overflow: ellipsis;
+  line-height: 3rem;
+  font-size: 2rem;
+}
+
+.product-preco {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.product-quantidade {
+  font-size: 1rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+
+}
+
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
+
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: flex-start;
+  flex-grow: 1; 
+  width: 100%;
 }
-.truncate {
-  white-space: nowrap; 
-    overflow: hidden;    
-    text-overflow: ellipsis; 
-}
-
-
-
 
 /* estilo do botão */ 
    .icon {

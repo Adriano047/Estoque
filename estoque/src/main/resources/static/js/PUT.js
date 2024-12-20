@@ -31,6 +31,6 @@ function enviarFormulario(event) {
         .catch(error => {
             console.error('Erro:', error);
         });
-        window.location.href = "/home";
+        window.location.href = "/";
     }
 }
