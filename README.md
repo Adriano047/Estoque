@@ -64,6 +64,19 @@ https://github.com/user-attachments/assets/39deea4c-2771-4b10-9275-513d23f603a9
 - **DELETE:** Remove um produto específico do estoque pelo ID.
 - **GET:** Retorna as informações de um produto específico pelo ID.
 
+## Rotas da Interface Web:
+**GET (Todos os produtos):**
+- **Rota:** http://localhost:8081
+
+**Formulario de requisição POST**
+- **Rota:** http://localhost:8081/novoProduto
+  
+**Formulario de requisição PUT**
+- **Rota:** http://localhost:8081/AlterarProduto/{id}
+
+**Formulario de requisição DELETE**
+- **Rota:** http://localhost:8081/DeletarProduto/{id}
+
 ## Mudança de Conexão Importante ⚠️:
 ![Alterações](https://github.com/user-attachments/assets/cdd667ed-d7fc-4278-93e3-231512763122)
 
